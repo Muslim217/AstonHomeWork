@@ -1,7 +1,9 @@
 
-
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Çµí‘8—âÛËà1
-V
-java:S1128"9Remove this unused import 'aston.task.list.ArrayListImp'.(¶—³Ô8™âÛËà1
+L	java:S106"+Replace this use of System.out by a logger.(’êğ¥ùÿÿÿÿ8ø‡æÊá1
+L	java:S106"+Replace this use of System.out by a logger.(­ğÊµıÿÿÿÿ8ıµçÊá1
+L	java:S106"+Replace this use of System.out by a logger.(´Û‘¦ıÿÿÿÿ8´üçÊá1
+L	java:S106"+Replace this use of System.out by a logger.(’êğ¥ùÿÿÿÿ8´üçÊá1
+S
+java:S1128"6Remove this unused import 'aston.task.list.ArrayList'.(½ïÈË8ù‡æÊá1
 M
-java:S1128"1Remove this unused import 'aston.task.list.List'.(³ÕÔ)8›âÛËà1
+java:S1128"1Remove this unused import 'aston.task.list.List'.(³ÕÔ)8ù‡æÊá1
