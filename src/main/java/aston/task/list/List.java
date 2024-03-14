@@ -4,9 +4,7 @@ import java.util.Comparator;
 
 public interface List<E> {
 
-    void add(E e);
-
-    void addToIndex(E e,int index);
+    boolean add(E e);
 
     E get(int index);
 

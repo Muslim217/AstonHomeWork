@@ -1,7 +1,0 @@
-
-Q
-java:S3740"/Provide the parametrized type for this generic.(Êß€Çùÿÿÿÿ8 ßÇÉá1
-P
-java:S1121$".Extract the assignment out of this expression.(±‹úÍüÿÿÿÿ8°¶àÉá1
-t	java:S127U"XRefactor the code in order to not assign to this loop counter from within the loop body.(ŞúŸ8°¶àÉá1
-v	java:S115	"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ô°’í8¬ßÇÉá1
