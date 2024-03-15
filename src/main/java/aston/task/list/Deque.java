@@ -1,6 +1,6 @@
 package aston.task.list;
 
-public interface Deque<E> extends List<E> {
+public interface Deque<E> {
 
     public boolean addLast(E e);
 

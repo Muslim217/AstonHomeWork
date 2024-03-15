@@ -14,6 +14,10 @@ public class MyArrayList<E> implements List<E> {
         data = (E[]) new Object[defaultSize];
     }
 
+    public MyArrayList(int sizeArray) {
+        data = (E[]) new Object[sizeArray];
+    }
+
     @Override
     public boolean add(E e) {
         if (size > data.length - 1) {
@@ -23,18 +27,18 @@ public class MyArrayList<E> implements List<E> {
             data = newData;
             size++;
             return true;
-        } else if (size <= data.length - 1) {
+        } else {
             data[size] = e;
             size++;
             return true;
         }
-        return false;
+
     }
 
 
     @Override
     public E get(int index) {
-        if (index <= data.length - 1 && size > 0) {
+        if (index < data.length && size > 0) {
             return data[index];
         } else {
             throw new ArrayIndexOutOfBoundsException();
@@ -58,7 +62,7 @@ public class MyArrayList<E> implements List<E> {
 
     @Override
     public boolean removeAll() {
-        data = (E[]) new Object[defaultSize];
+        Arrays.fill(data, null);
         size = 0;
         return true;
     }
@@ -70,19 +74,12 @@ public class MyArrayList<E> implements List<E> {
 
     @Override
     public boolean isEmpty() {
-        if (size > 0) {
-            return false;
-        } else {
-            return true;
-        }
+        return size == 0;
     }
 
     @Override
     public void sort(Comparator comparator) {
-        if (comparator == null) {
-            Arrays.sort(data, 0, size, null);
-        } else
-            Arrays.sort(data, 0, size, comparator);
+        Arrays.sort(data, 0, size, comparator);
     }
 
     @Override

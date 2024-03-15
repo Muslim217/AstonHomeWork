@@ -9,26 +9,26 @@ public class MyLinkedList<E> implements List<E>, Deque<E>, Iterable<E> {
     private Node tail;
     private int size = 0;
 
+
+
+
     @Override
     public boolean addFirst(E e) {
         Node<E> firstNode = new Node<>(e);
         if (size == 0) {
             head = firstNode;
             tail = firstNode;
-            size++;
-            return true;
+
+
         } else {
             firstNode.next = head;
             head.previous = firstNode;
             head = firstNode;
-            size++;
-            return true;
 
         }
-
-
+        size++;
+        return true;
     }
-
 
 
     @Override
@@ -37,16 +37,13 @@ public class MyLinkedList<E> implements List<E>, Deque<E>, Iterable<E> {
         if (size == 0) {
             head = lastNode;
             tail = lastNode;
-            size++;
-            return true;
         } else {
             tail.next = lastNode;
             lastNode.previous = tail;
             tail = lastNode;
-            size++;
-            return true;
         }
-
+        size++;
+        return true;
     }
 
     @Override
@@ -81,7 +78,6 @@ public class MyLinkedList<E> implements List<E>, Deque<E>, Iterable<E> {
             size++;
             return true;
         }
-
     }
 
     @Override
@@ -97,8 +93,6 @@ public class MyLinkedList<E> implements List<E>, Deque<E>, Iterable<E> {
             }
             return (E) currentNode.value;
         }
-
-
     }
 
     @Override
@@ -133,11 +127,7 @@ public class MyLinkedList<E> implements List<E>, Deque<E>, Iterable<E> {
             size--;
 
             return true;
-
-
         }
-
-
     }
 
     @Override
@@ -168,10 +158,7 @@ public class MyLinkedList<E> implements List<E>, Deque<E>, Iterable<E> {
             node = node.next;
             counter++;
         }
-        if (comparator == null) {
-            Arrays.sort(data, 0, data.length, null);
-        } else
-            Arrays.sort(data, 0, data.length, comparator);
+        Arrays.sort(data, 0, data.length, comparator);
         removeAll();
         for (int i = 0; i < data.length; i++) {
             add((E) data[i]);
