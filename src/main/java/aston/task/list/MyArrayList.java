@@ -38,10 +38,11 @@ public class MyArrayList<E> implements List<E> {
 
     @Override
     public E get(int index) {
-        if (index < data.length && size > 0) {
-            return data[index];
+        if (index < 0 || index >= size) {
+            throw new ArrayIndexOutOfBoundsException("Array out of bounds");
+
         } else {
-            throw new ArrayIndexOutOfBoundsException();
+            return data[index];
         }
     }
 
@@ -84,7 +85,15 @@ public class MyArrayList<E> implements List<E> {
 
     @Override
     public String toString() {
-        return Arrays.toString(data);
+        StringBuilder stringBuilder = new StringBuilder("[");
+        for (int i = 0; i < size; i++) {
+            stringBuilder.append(data[i]);
+            if (i < size - 1) {
+                stringBuilder.append(", ");
+            }
+        }
+        stringBuilder.append("]");
+        return stringBuilder.toString();
     }
 
 }
